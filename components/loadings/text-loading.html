@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <style>
+    body{
+        background-color:#fafafa;
+    }
+    .container {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      -webkit-transform: translate(-50%, -50%);
+          -ms-transform: translate(-50%, -50%);
+              transform: translate(-50%, -50%);
+    }
+    .body--gradient {
+      font-size: 5rem;
+      -webkit-transition: all 1s ease;
+      -o-transition: all 1s ease;
+      transition: all 1s ease;
+      color: #ede574;
+      background-color: #ede574;
+      background: -o-linear-gradient(left, #ff4e50 10% , #fc913a, #f9d423, #ede574);
+      background: -webkit-linear-gradient(left, #ff4e50 10% , #fc913a, #f9d423, #ede574);
+      -webkit-background-clip: text;
+      -moz-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      -webkit-animation: body--gradient 2s infinite forwards ease-in-out;
+      animation: body--gradient 2s infinite forwards ease-in-out;
+      margin-bottom: 5%;
+    }
+    @keyframes body--gradient{
+      30% {
+        background: -webkit-linear-gradient(right, #ede574, #f9d423, #fc913a,#ff4e50);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+        background-position: -860px;
+       }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1 class="body--gradient">
+      예쁜 그림 기다리는중
+    </h1>
+  </div>
+</body>
+<script>
+  const text = ['꿈에 나온 그림 기다리기', '오늘 밤 시공할 벽화 뽑는중', '살아있는 색상 나오는중', '포트폴리오 뽑는중']
+  const target = document.querySelector('.body--gradient')
+  let index = 0
+  let loading = true
+  
+  let textChange = setInterval(() => {
+    target.textContent = text[index]
+    index ++
+  },2000)
+  
+  if (index > 3) {
+    index = 0
+    return clearInterval(textChange)
+  }
+  
+  textChange()
+  
+
+
+  
+  
+</script>
+</html>
