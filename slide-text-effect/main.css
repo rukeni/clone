@@ -1,0 +1,43 @@
+body {
+  background-color: coral;
+  overflow: hidden;
+  text-align: center;
+}
+
+.perspective-text {
+  color: black;
+  font-weight: 900;
+  text-transform: uppercase;
+}
+
+.perspective-line {
+  height: 100px;
+  overflow: hidden;
+}
+
+p {
+  margin: 0;
+  height: 100px;
+  line-height: 100px;
+  transition: all 0.5s ease-in-out
+}
+
+.perspective-line:nth-child(odd) {
+  color: navy;
+}
+
+.perspective-line:nth-child(odd):hover {
+  background-color: #fafa73;
+}
+
+.perspective-line:nth-child(even) {
+  color: darkkhaki;
+}
+
+.perspective-line:nth-child(even):hover {
+  background-color: #278182;
+}
+
+.perspective-line:hover p{
+  transform: translate(0, -100px);
+}
