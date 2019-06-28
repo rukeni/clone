@@ -8,3 +8,4 @@
   - 이미지 슬라이더
   - 슬라이딩 텍스트 효과
   - split.js이용한 효과
+  - text animation 효과
