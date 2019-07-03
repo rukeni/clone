@@ -9,3 +9,5 @@
   - 슬라이딩 텍스트 효과
   - split.js이용한 효과
   - text animation 효과
+  - hover effect 효과
+  - block effect 효과
